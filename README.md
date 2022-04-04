@@ -1,2 +1,2 @@
 # Balls
-A game where you play with your balls. Well not exactly ;) 
+A simple game .. Just don't let the meteor hit the Earth. 
