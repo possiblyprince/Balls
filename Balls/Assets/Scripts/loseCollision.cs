@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class loseCollision : MonoBehaviour
 {
+    [SerializeField] ParticleSystem one;
+    
+
+    void Start()
+    {
+        //one.SetActive(false); 
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Respawn")
@@ -13,6 +21,7 @@ public class loseCollision : MonoBehaviour
             // SceneManager.LoadScene("Death"); 
             //Use the top line to change the scene.
             Time.timeScale = 0;
+            
         }
     }
 }
