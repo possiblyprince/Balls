@@ -7,12 +7,10 @@ public class loseCollision : MonoBehaviour
 {
     [SerializeField] ParticleSystem one;
     [SerializeField] GameObject explosionPartiicle;
-    turnOffRigidBody tOff;
 
     void Start()
     {
         //one.SetActive(false); 
-        tOff = GetComponent<turnOffRigidBody>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
