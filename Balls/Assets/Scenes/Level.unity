@@ -34015,10 +34015,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 553617750, guid: d7d580c29d72dcb40a082bb831fcc3b1, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2555638712919017158, guid: d7d580c29d72dcb40a082bb831fcc3b1, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -34067,10 +34063,6 @@ PrefabInstance:
       propertyPath: scoreTxt
       value: 
       objectReference: {fileID: 1724399453}
-    - target: {fileID: 3531431781704815249, guid: d7d580c29d72dcb40a082bb831fcc3b1, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3531431781704815249, guid: d7d580c29d72dcb40a082bb831fcc3b1, type: 3}
       propertyPath: spawnObject
       value: 

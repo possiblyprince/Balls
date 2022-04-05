@@ -17,7 +17,6 @@ public class LastSceneExp : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Instantiate(explosionPartiicle, transform.position, transform.rotation);
-
         }
     }
 }
