@@ -13,8 +13,14 @@ public class Basket : MonoBehaviour
 
     private void moveBasket()
     {
+        //for PC
+        //Vector2 basketPosition = new Vector2(Mathf.Clamp
+          //  (Input.mousePosition.x / Screen.width * screenWidthUnit, 0, 16), transform.position.y);
+        //transform.position = basketPosition;
+        
+        //for Android
         Vector2 basketPosition = new Vector2(Mathf.Clamp
-            (Input.mousePosition.x / Screen.width * screenWidthUnit, 0, 16), transform.position.y);
+            (Input.acceleration.x / Screen.width * screenWidthUnit, 0, 16), transform.position.y);
         transform.position = basketPosition;
     }
 
