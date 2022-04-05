@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class loseCollision : MonoBehaviour
 {
     [SerializeField] ParticleSystem one;
-    
+    [SerializeField] GameObject explosionPartiicle;
+    turnOffRigidBody tOff;
 
     void Start()
     {
         //one.SetActive(false); 
+        tOff = GetComponent<turnOffRigidBody>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -20,7 +22,8 @@ public class loseCollision : MonoBehaviour
             Destroy(collision.gameObject);
             // SceneManager.LoadScene("Death"); 
             //Use the top line to change the scene.
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
+            Instantiate(explosionPartiicle, transform.position, transform.rotation);
             
         }
     }

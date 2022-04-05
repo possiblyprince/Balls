@@ -7,7 +7,8 @@ public class cameraSwitch : MonoBehaviour
     public Camera mainCam;
     public Camera secondCam;
     [SerializeField] GameObject ballSpawn;
-    [SerializeField] float slowMotionSpeed;
+    //[SerializeField] float slowMotionSpeed;
+
 
     private void OnEnable()
     {
@@ -18,7 +19,7 @@ public class cameraSwitch : MonoBehaviour
 
     public void toggleSecondCam()
     {
-        Time.timeScale = slowMotionSpeed;
+       // Time.timeScale = slowMotionSpeed;
         secondCam.GetComponent<Rigidbody2D>().isKinematic = false;
         mainCam.enabled = false;
         secondCam.enabled = true;
