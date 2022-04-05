@@ -6,10 +6,17 @@ using UnityEngine.SceneManagement;
 public class loseCollision : MonoBehaviour
 {
     [SerializeField] GameObject explosionPartiicle;
+    [SerializeField] float delayTime = 3f;
 
     void Start()
     {
         //one.SetActive(false); 
+    }
+
+
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(2);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -21,8 +28,10 @@ public class loseCollision : MonoBehaviour
             //Use the top line to change the scene.
             //Time.timeScale = 0;
             Instantiate(explosionPartiicle, transform.position, transform.rotation);
-            SceneManager.LoadScene(2);
-            
+            GetComponent<AudioSource>().Play();
+            Invoke("LoadNextScene", delayTime);
         }
+        
+
     }
 }

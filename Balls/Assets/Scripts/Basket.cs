@@ -26,22 +26,19 @@ public class Basket : MonoBehaviour
         dirX = Input.acceleration.x * moveSpeed;
         transform.position = new Vector2(Mathf.Clamp(transform.position.x, 0, screenWidthUnit), transform.position.y);
        
-            //Vector2 basketPosition = new Vector2(Mathf.Clamp
-              //(Input.acceleration.x / Screen.width * screenWidthUnit, 0, 16), transform.position.y);
-           //transform.position = basketPosition;
 
 
         //-----------------------------------------------------------//
         //for PC
-        //Vector2 basketPosition = new Vector2(Mathf.Clamp
-        //  (Input.mousePosition.x / Screen.width * screenWidthUnit, 0, 16), transform.position.y);
+    //    Vector2 basketPosition = new Vector2(Mathf.Clamp
+      //    (Input.mousePosition.x / Screen.width * screenWidthUnit, 0, 16), transform.position.y);
         //transform.position = basketPosition;
 
     }
 
     private void FixedUpdate()
-    {
-        rig.velocity = new Vector2(dirX, 0f);
+   {
+      rig.velocity = new Vector2(dirX, 0f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -50,6 +47,7 @@ public class Basket : MonoBehaviour
         {
             Destroy(collision.gameObject);
             GetComponent<ScoreSystem>().increaseScore();
+            GetComponent<AudioSource>().Play();
         }
     }
 }
