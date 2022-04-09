@@ -24614,6 +24614,7 @@ MonoBehaviour:
   explosionPartiicle: {fileID: 2233736227348554352, guid: 0cf73f1ef4099484cae3b12a57001f4d, type: 3}
   delayTime: 3
   gameOverCanvas: {fileID: 102824575}
+  pausePlay: {fileID: 307768380}
 --- !u!61 &1518529379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24786,7 +24787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 26.400024, y: -23.099976}
+  m_AnchoredPosition: {x: 48.1, y: -41.2}
   m_SizeDelta: {x: 35.769287, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1598114255
@@ -34802,7 +34803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453996808897413857, guid: 2b852e1b3abadf34fab39968ea33290e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 18.7
       objectReference: {fileID: 0}
     - target: {fileID: 5453996808897413857, guid: 2b852e1b3abadf34fab39968ea33290e, type: 3}
       propertyPath: m_LocalRotation.w

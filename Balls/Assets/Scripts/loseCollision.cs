@@ -8,6 +8,7 @@ public class loseCollision : MonoBehaviour
     [SerializeField] GameObject explosionPartiicle;
     [SerializeField] float delayTime = 3f;
     [SerializeField] Canvas gameOverCanvas;
+    [SerializeField] Canvas pausePlay;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class loseCollision : MonoBehaviour
             Instantiate(explosionPartiicle, transform.position, transform.rotation);
             GetComponent<AudioSource>().Play();
             gameOverCanvas.enabled = true;
+            pausePlay.enabled = false;
         }
         
 
