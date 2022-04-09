@@ -14,7 +14,16 @@ public class ScoreSystem : MonoBehaviour
 
     void Start()
     {
-        scoreTxt.text = score.ToString();
+        if (scoreTxt.text == null)
+        {
+            return;
+        }
+        else
+        {
+            scoreTxt.text = score.ToString();
+        }
+
+        
         minSpeedPossible = spawnObject.GetComponent<BallSpawn>().returnMinSpeed();
     }
 

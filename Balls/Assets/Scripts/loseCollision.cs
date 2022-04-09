@@ -7,10 +7,11 @@ public class loseCollision : MonoBehaviour
 {
     [SerializeField] GameObject explosionPartiicle;
     [SerializeField] float delayTime = 3f;
+    [SerializeField] Canvas gameOverCanvas;
 
     void Start()
     {
-        //one.SetActive(false); 
+        gameOverCanvas.enabled = false; 
     }
 
 
@@ -29,7 +30,7 @@ public class loseCollision : MonoBehaviour
             //Time.timeScale = 0;
             Instantiate(explosionPartiicle, transform.position, transform.rotation);
             GetComponent<AudioSource>().Play();
-            Invoke("LoadNextScene", delayTime);
+            gameOverCanvas.enabled = true;
         }
         
 
